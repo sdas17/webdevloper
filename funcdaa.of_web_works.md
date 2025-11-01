@@ -1,0 +1,11 @@
+MEAN 
+M :MONGOOSE
+E :EXPRESS
+A :ANGULAR
+N:NODE 
+
+THREE PILLARS
+HTML
+CSS
+JS
+mean,mern,java full stack
