@@ -3,45 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page Example</title>
+  <title>Improved Login Page</title>
+
   <style>
+    /* === General Page Styling === */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
       margin: 0;
-      padding: 0;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-    }
-
-    h1 {
       color: #333;
     }
 
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    /* === Login Container === */
     .login-container {
-      background-color: #fff;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      margin-top: 20px;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-3px);
     }
 
     .login-container h2 {
-      text-align: center;
       margin-bottom: 20px;
+      color: #444;
     }
 
     .login-container input {
       width: 100%;
-      padding: 10px;
+      padding: 10px 12px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    .login-container input:focus {
+      border-color: #4CAF50;
+      outline: none;
     }
 
     .login-container button {
@@ -50,24 +64,33 @@
       background-color: #4CAF50;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     .login-container button:hover {
       background-color: #45a049;
     }
 
+    /* === Feedback Message === */
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* === Extra Button === */
     #myButton {
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 25px;
+      padding: 10px 25px;
       background-color: #2196F3;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
     #myButton:hover {
@@ -75,8 +98,9 @@
     }
   </style>
 </head>
+
 <body>
-  <h1>Hello, World!</h1>
+  <h1>Welcome!</h1>
 
   <!-- Login Form -->
   <div class="login-container">
@@ -84,6 +108,7 @@
     <input type="text" id="username" placeholder="Username" />
     <input type="password" id="password" placeholder="Password" />
     <button id="loginBtn">Login</button>
+    <p id="message"></p>
   </div>
 
   <!-- Existing Button -->
@@ -92,21 +117,40 @@
   <!-- JavaScript -->
   <script>
     // Button functionality
-    const button = document.getElementById('myButton');
-    button.addEventListener('click', function() {
+    document.getElementById('myButton').addEventListener('click', () => {
       alert('Button clicked!');
     });
 
     // Login functionality
-    const loginBtn = document.getElementById('loginBtn');
-    loginBtn.addEventListener('click', function() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const message = document.getElementById('message');
 
-      if (username === "admin" && password === "1234") {
-        alert("Login successful!");
+      // Clear previous messages
+      message.textContent = '';
+      message.style.color = '';
+
+      // Basic validation
+      if (!username || !password) {
+        message.textContent = 'Please fill in both fields.';
+        message.style.color = 'red';
+        return;
+      }
+
+      // Demo login validation
+      if (username === 'admin' && password === '1234') {
+        message.textContent = '✅ Login successful!';
+        message.style.color = 'green';
+
+        // Simulate redirect after a short delay
+        setTimeout(() => {
+          alert('Redirecting to dashboard...');
+          // window.location.href = "dashboard.html"; // Example redirect
+        }, 1000);
       } else {
-        alert("Invalid username or password");
+        message.textContent = '❌ Invalid username or password.';
+        message.style.color = 'red';
       }
     });
   </script>
