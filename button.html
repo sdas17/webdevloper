@@ -14,11 +14,6 @@
   <button id="btn3">Button 3</button>
   <button id="btn4">Button 4</button>
   <button id="btn5">Button 5</button>
-  <button id="btn6">Button 6 (Change Background)</button>
-  <button id="btn7">Button 7 (Show Time)</button>
-
-  <button id="btn8">Button 8 (Change Heading)</button>
-
 
   <!-- JavaScript -->
   <script>
@@ -27,21 +22,6 @@
     document.getElementById('btn3').addEventListener('click', () => alert('Button 3 clicked!'));
     document.getElementById('btn4').addEventListener('click', () => alert('Button 4 clicked!'));
     document.getElementById('btn5').addEventListener('click', () => alert('Button 5 clicked!'));
-
-    // 🆕 Button 6: Change background color
-    
-    document.getElementById('btn8').addEventListener('click', () => {
-    document.querySelector('h1').textContent = "Heading Changed!";
-  });
-    document.getElementById('btn6').addEventListener('click', () => {
-      const colors = ['#f28b82', '#fbbc04', '#34a853', '#4285f4', '#9c27b0'];
-      document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    });
-
-    // 🆕 Button 7: Show date and time
-    document.getElementById('btn7').addEventListener('click', () => {
-      alert('Current Date & Time: ' + new Date().toLocaleString());
-    });
   </script>
 </body>
 </html>
