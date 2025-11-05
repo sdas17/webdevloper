@@ -14,6 +14,8 @@
   <button id="btn3">Button 3</button>
   <button id="btn4">Button 4</button>
   <button id="btn5">Button 5</button>
+  <button id="btn6">Button 6 (Toggle Background)</button>
+  <button id="btn7">Button 7 (Show/Hide Heading)</button>
   <button id="btn8">Button 8 (Change Heading)</button>
 
   <!-- JavaScript -->
@@ -23,6 +25,18 @@
     document.getElementById('btn3').addEventListener('click', () => alert('Button 3 clicked!'));
     document.getElementById('btn4').addEventListener('click', () => alert('Button 4 clicked!'));
     document.getElementById('btn5').addEventListener('click', () => alert('Button 5 clicked!'));
+    // Button 6: toggle the page background color
+    document.getElementById('btn6').addEventListener('click', () => {
+      const body = document.body;
+      body.style.backgroundColor = body.style.backgroundColor === 'lightblue' ? '' : 'lightblue';
+    });
+
+    // Button 7: show/hide the main heading
+    document.getElementById('btn7').addEventListener('click', () => {
+      const h = document.querySelector('h1');
+      if (!h) return;
+      h.style.display = (h.style.display === 'none') ? '' : 'none';
+    });
     // Button 8: change the main heading text
     document.getElementById('btn8').addEventListener('click', () => {
       const h = document.querySelector('h1');
