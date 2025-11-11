@@ -1,0 +1,6 @@
+div p:first-child {
+  border: 2px solid orange;
+}
+div p:not(:first-child) {
+      color: white;
+    }
