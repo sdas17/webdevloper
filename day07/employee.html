@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title>
+
+    <style>
+
+        /* Page background and center form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Form container */
+        form {
+            background: #ffffff;
+            padding: 25px;
+            width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Input, Select fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        /* Radio button labels */
+        .gender-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        /* Fieldset */
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        /* Submit button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <form>
+
+        <h1>Employee Details Form</h1>
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">Full Name:</label>
+            <input type="text" id="fname" name="userName">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="useremail">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="userphone">
+
+            <label>Gender:</label>
+            <div class="gender-group">
+                <input type="radio" name="GEN" id="male" value="M">
+                <label for="male">Male</label>
+
+                <input type="radio" name="GEN" id="female" value="F">
+                <label for="female">Female</label>
+
+                <input type="radio" name="GEN" id="oth" value="OTH">
+                <label for="oth">Other</label>
+            </div>
+        </fieldset>
+
+        <!-- Job Title -->
+        <label for="jobt">Job Title:</label>
+        <input type="text" id="jobt" name="jobtitle">
+
+        <!-- Department -->
+        <label for="departme">Department:</label>
+        <select id="departme" name="department">
+            <option value="Eng">English</option>
+            <option value="Sci">Science</option>
+            <option value="Math">Math</option>
+            <option value="Hindi">Hindi</option>
+        </select>
+
+        <!-- Checkbox -->
+        <label>
+            <input type="checkbox" id="idchecq">
+            Are you satisfied all are correct?
+        </label>
+
+        <!-- Submit -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
