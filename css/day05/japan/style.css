@@ -1,0 +1,15 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.circle{
+    border: 1px solid lightblue;
+    height: 60vh;
+    width: 60vh;
+    background-color: red;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20vh;
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Parent Card (Flag base) */
+    .card-size{
+        width: 20vw;
+        height: 20vh;
+        background-color: blue;
+        margin: auto;
+        margin-top: 10px;
+
+     
+    }
+
+    /* First column (left small cards) */
+    .box1, .box3 {
+        width: 7vw;
+        display: inline-block;
+        height: 10vh;
+        background-color: aliceblue;
+    }
+
+
+    /* Second column (right big cards) */
+    .box2, .box4 {
+        width: 11vw;
+                margin-left: 1vw;
+
+        height: 10vh;
+        background-color: aliceblue;
+                display: inline-block;
+
+    }
+</style>
+
+</head>
+<body>
+
+<div class="card-size">
+
+    <!-- Row 1 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <!-- Row 2 -->
+    <div class="box3"></div>
+    <div class="box4"></div>
+
+</div>
+
+</body>
+</html>

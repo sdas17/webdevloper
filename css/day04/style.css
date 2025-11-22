@@ -1,0 +1,35 @@
+h1{
+    background-color: aqua;
+    /* border-width: 2px;
+    border-style:solid ;
+    border-color: black; */
+    width: 300px;
+    height: 200px;
+}
+h2{
+   border-left-width: 1px;
+    background-color: aqua;
+    border-left-style: groove;
+    border-left-color: black;
+    border-radius: 10px;
+
+}
+p{
+    background-color: lightcyan;
+    border-width: 10px;
+    border-color: aliceblue;
+    border-style: solid;
+}
+ul{
+    background-color: rgb(218, 184, 184);
+}
+
+h3{
+    width: 200px;
+    height: 200px;
+    border: 5px solid lightblue;
+    padding: 10px 10px;
+    background-color: aqua;
+    box-sizing: border-box;
+    margin-top: 0px;
+}
