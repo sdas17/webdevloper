@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+    }
+
+    /* Corrected class name: .box_container */
+    .box_container {
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid lightblue;
+    }
+
+    .box {
+        width: 10vw;
+        height: 10vw;    
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .box1 { background: lightcoral;}
+    .box2 { background: lightgreen}
+    .box3 { background: lightskyblue; }
+    .box4 { background: plum; }
+</style>
+
+</head>
+<body>
+
+    <p>
+        <b>z-index</b> only works on positioned elements  
+        (position: relative, absolute, fixed, sticky)
+    </p>
+
+    <div class="box_container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+    </div>
+
+</body>
+</html>

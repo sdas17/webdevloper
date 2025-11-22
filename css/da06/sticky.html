@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky Filter Bar Demo</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f7;
+    }
+
+    /* Sticky header filter bar */
+    .filter-bar {
+        position: sticky;
+        top: 0;                  /* sticks to top */
+        background: white;
+        padding: 10px 15px;
+        border-bottom: 2px solid #ddd;
+        z-index: 10;             /* stays above content */
+    }
+
+    .filter-bar h3 {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .filter-bar select {
+        padding: 6px 10px;
+        font-size: 15px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    /* Content items */
+    .content {
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- Sticky Filter -->
+    <div class="filter-bar">
+        <h3>Filters</h3>
+        <select>
+            <option>Category A</option>
+            <option>Category B</option>
+            <option>Category C</option>
+        </select>
+        <select>
+            <option>Date: Latest</option>
+            <option>Date: Oldest</option>
+        </select>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="content">
+
+        <div class="card">Item 1 data...</div>
+        <div class="card">Item 2 data...</div>
+        <div class="card">Item 3 data...</div>
+        <div class="card">Item 4 data...</div>
+        <div class="card">Item 5 data...</div>
+        <div class="card">Item 6 data...</div>
+        <div class="card">Item 7 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+        <div class="card">Item 8 data...</div>
+
+    </div>
+
+</body>
+</html>
