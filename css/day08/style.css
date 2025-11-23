@@ -204,6 +204,7 @@ line-height: 1.4;
     position: absolute;
     top: 116px;
     left: 11px;
+    margin-left: 10px;
 }
 .card_images_data{
     border-radius: 15%;
