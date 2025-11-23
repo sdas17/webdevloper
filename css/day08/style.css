@@ -1,0 +1,274 @@
+
+*{
+    margin: 0;
+
+}
+.box{
+    display: inline-block;
+}
+.product-image{
+    position: relative;
+}
+.img{
+    height: 250px;
+    width: auto;
+    border-radius: 24px;
+}
+
+.card{
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: aliceblue;
+    border: 20px solid white;
+    border: 10px;
+}
+body{
+    background-color: rgb(253,243,243);
+}
+
+.product_ratiing{
+        background-color: green;
+        border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    height: 15px;
+    padding: 4px;
+    position: absolute;
+    left: 400px;
+}
+.product_details{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+.prodiuct_price_data{
+       font-size: inherit;
+    line-height: 1.5;
+  margin-top: 5px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(105, 105, 105);
+    max-width: 56%;
+    padding: 0px 0px 0.4rem;
+    position: relative;
+}
+
+.price_data{
+    position: absolute;
+    left: 400px;
+font-size: inherit;
+    line-height: 1.5;
+    /* margin: 0px; */
+    margin-top: 5px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(105, 105, 105);
+    max-width: 30%;
+    padding: 0px 0px 0.4rem;
+}
+.product_addres{
+position: relative;
+
+}
+.offer {
+font-size: 25px;
+  position: absolute;
+  color: white;
+  background-color: rgba(218,43,16,0.6);
+  top: 189px;
+    left: 19px;
+}
+
+.product_addres_track{
+    position: absolute;
+    left: 400px;
+}
+header{
+    background-color: white
+}
+
+.first_div{
+    display: inline-block;
+   margin-left: 200px;
+}
+.secound_div{
+
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  
+
+
+}
+.thid_div{
+     
+       height: 500px;
+background: rgb(248, 248, 248);
+}
+
+
+
+.brand{
+    color: rgb(243, 4, 4);
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: 26px;
+    position: relative;
+    top: 3px;
+
+}
+
+.search_bar {
+  width: 400px;
+  height: 2.4rem;
+
+  margin-right: 50px;
+  position: relative;
+  bottom: 5px;
+
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.8rem;
+
+  box-shadow: 0px 2px 8px rgba(28, 28, 28, 0.08);
+
+  padding: 0 12px;             /* space inside box */
+  font-size: 15px;             /* better text size */
+  outline: none;               /* remove default blue outline */
+}
+
+
+button{
+    height: 40px;
+    width: 80px;
+    background-color: #fff;
+    cursor: pointer;
+    color: black;
+    position: relative;
+    bottom: 4px;
+    border-style: hidden;
+}
+
+
+
+.cards-container {
+    margin-left: 200px;
+}
+
+.dining-out-image{
+    margin-left: 30px;
+}
+.third_box{
+        margin-left: 200px;
+    display: inline-block;
+}
+.thid_box_connection{
+    margin-top: 50px;
+
+}
+.dining-box{
+    margin-left: 167px;
+    display: inline-block;
+}
+.dining-out-font{
+    position: relative;
+    top: -35px;
+    left: 3px;
+
+}
+.dining-out-font h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.third_box_fontsize,h3{
+line-height: 1.4;
+    font-weight: 300;
+    color: rgb(54, 54, 54);
+    display: inline-block;
+}
+.right-text{
+    display: inline-block;
+    margin-left: 230px;
+    color: red;
+}
+
+.card_images_text {
+    position: absolute;
+    top: 116px;
+    left: 11px;
+}
+.card_images_data{
+    border-radius: 15%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+
+
+
+.card_images_text h4,
+.card_images_text p {
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0px 0.7rem 0px 0px;
+    text-decoration: none;
+    color: #ffffff;        /* white text */
+}
+
+.card_images_text h4 {
+    font-size: 1.4rem;     /* as you requested */
+}
+
+.card_images_text p {
+    font-size: 1rem;       /* smaller subtitle */
+}
+
+
+
+.cards_wrapper {
+    display: flex;
+    gap: 20px;       
+    margin-left: 206px; 
+    margin-top: 30px;
+}
+
+.card_images {
+   
+    position: relative;
+    width: 200px;        /* same as img width */
+    height: 200px;       /* same as img height */
+}
+
+
+.card_images_text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.card_images_text h4,
+.card_images_text p {
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.card_images_text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.card_images_text h4,
+.card_images_text p {
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
