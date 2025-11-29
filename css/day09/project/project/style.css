@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+.take_margin{
+    margin: 0px 50px 0px 50px;
+}
+.logo{
+    display: flex;
+    background-color: rgb(224, 91, 91);
+    justify-content: space-between;
+    align-items: center;
+}
+.left,h1{
+    color: aliceblue;
+    font-weight: 600;
+    font-size: medium;
+    
+}
+button {
+  background-color: rgb(237, 132, 132);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px silver;
+}
+.search-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+input{
+    border-radius: 15px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            width: 400px;
+}
+.search-header>button{
+ background-color: rgb(237, 132, 132);
+     border-radius: 15px;
+
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px silver;
+  margin-left: 3px;
+}
+.moview>p{
+    margin: 0px;
+    word-break: break-word;
+    color: rgb(220, 53, 88);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+}
+.moview >h1{
+        word-break: break-word;
+    color: rgb(51, 51, 51);
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+.moview{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.moview-card{
+    margin-left:250px ;
+    margin-right: 250px;
+    background-color: #fff;
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-moview >img{
+    border-radius: 20px;
+}
+.card-moview{
+    flex-wrap: wrap;
+    align-content: center;
+}
+.card-moview>p{
+        margin: 0px;
+    word-break: break-word;
+    color: rgb(102, 102, 102);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   
+}
+.advt-card{
+        margin-left:250px ;
+    margin-right: 250px;
+    background-color: #fff;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.container{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+    
+}
+.box{
+    width: 50px;
+    flex-grow: 2;
+    height: 320px;
+    /* display: inline-block; */
+    background-color: blueviolet;
+    margin-left: 2px;
+}
