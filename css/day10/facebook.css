@@ -21,6 +21,36 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
 }
+@media (max-width: 768px) {
+
+    .nav-icons {
+        display: none !important;
+    }
+
+    /* Hide search input on mobile */
+    .search-box input {
+        display: none;
+    }
+
+    /* Mobile search icon style */
+    .search-box i {
+        position: relative;        /* allows left/right movement */
+        background-color: #e4e6eb;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+        left: 0px;                 /* works now */
+    }
+
+    /* Wrapper adjustment */
+    .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+}
+
 
 .face-logo-search {
     display: flex;
@@ -28,6 +58,7 @@
     gap: 7px;
 }
 .nav-icons{
+    
     display: flex;
     align-items: center;
     gap: 60px;
@@ -210,6 +241,9 @@ position: relative;
     font-size: 16px;
 }
 
+.info-list{
+    margin-top: 10px;
+}
 .info-list i {
     color: #444;
     font-size: 18px;

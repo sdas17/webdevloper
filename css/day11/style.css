@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    background-color: aqua;
+    width: 50%;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    margin-top: 10px;
+    /* box-shadow: 10px 10px red; */
+    transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function:linear ;
+    transition-delay: 3s;
+}
+.box:hover{
+    background-color: black;
+}
