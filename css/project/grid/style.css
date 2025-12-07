@@ -64,9 +64,39 @@ body {
   grid-row-start: 1;
   grid-row-end: 3;
 }
+.product-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
 
+  /* Default - Mobile (1 column) */
+  grid-template-columns: repeat(1, 1fr);
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop View - 900px and above */
+@media (min-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .box2 {
   grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+
 }
