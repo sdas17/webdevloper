@@ -7,9 +7,9 @@
 // console.log(date_filter.getDay()+1)
 // console.log(date_filter.getMonth()+1)
 // console.log(date_filter.getFullYear());
-// console.log(date_filter.getTime());
+// const date_filter = new Date("2026-06-23T00:00:00")
 // const date_now=Date.now()
-// console.log(date_now-date_filter.getTime())
+// console.log(date_filter.getTime(),date_now)
 // const date_filters=new Date(2010,11,21)
 // console.log(date_filters)
 // const date_filters=new Date()
