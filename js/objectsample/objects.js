@@ -157,30 +157,30 @@
 // console.log(first_value);
 // console.log(secound);
 
-const sample_data = {
-    user: {
-        personal: {
-            address: {
-                pincode: [
-                    {
-                        pincode: 32121,
-                        city: "Odisha",
-                        state: "Odisha-State",
-                        details: {
-                            postOffice: "Main PO",
-                            region: {
-                                zone: "East Zone",
-                                district: "Khordha"
-                            }
-                        }
-                    }
-                ]
-            }
-        }
-    }
-};
+// const sample_data = {
+//     user: {
+//         personal: {
+//             address: {
+//                 pincode: [
+//                     {
+//                         pincode: 32121,
+//                         city: "Odisha",
+//                         state: "Odisha-State",
+//                         details: {
+//                             postOffice: "Main PO",
+//                             region: {
+//                                 zone: "East Zone",
+//                                 district: "Khordha"
+//                             }
+//                         }
+//                     }
+//                 ]
+//             }
+//         }
+//     }
+// };
 
-// const {address:{pincode,city}}=obj
-const {user:{personal:{address:{pincode:[{            pincode: pin,
-}]}}}}=sample_data
-console.log(pin)
+// // const {address:{pincode,city}}=obj
+// const {user:{personal:{address:{pincode:[{            pincode: pin,
+// }]}}}}=sample_data
+// console.log(pin)
