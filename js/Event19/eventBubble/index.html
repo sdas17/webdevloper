@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beautiful Buttons – Background Switcher</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #020617, #000);
+  transition: background 0.5s ease;
+}
+
+/* ===== CONTAINER ===== */
+#root {
+  display: flex;
+  gap: 20px;
+  padding: 30px 40px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  align-items: center;
+}
+
+/* ===== TITLE ===== */
+#root h1 {
+  color: #e5e7eb;
+  font-size: 18px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* ===== BUTTON ===== */
+button {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== GLOW ===== */
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 25px currentColor;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===== COLORS ===== */
+#red {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+}
+#blue {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+}
+#orange {
+  background: linear-gradient(135deg, #fb923c, #c2410c);
+}
+#green {
+  background: linear-gradient(135deg, #22c55e, #14532d);
+}
+#yellow {
+  background: linear-gradient(135deg, #facc15, #854d0e);
+  color: #422006;
+}
+</style>
+</head>
+
+<body>
+
+<div id="root">
+  <h1>My Button Styles</h1>
+
+  <button id="red" data-color="red">Red</button>
+  <button id="blue" data-color="blue">Blue</button>
+  <button id="orange" data-color="orange">Orange</button>
+  <button id="green" data-color="green">Green</button>
+  <button id="yellow" data-color="yellow">Yellow</button>
+</div>
+
+<script>
+const root = document.getElementById("root");
+
+root.addEventListener("click", (event) => {
+  // Ensure click is on a button only
+  if (event.target.tagName !== "BUTTON") return;
+
+  // Match background with button gradient
+  const styles = getComputedStyle(event.target);
+  document.body.style.background = styles.background;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Event Bubbling Demo</title>
+
+<style>
+/* ===== BODY ===== */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  font-family: system-ui;
+}
+
+/* ===== GRAND PARENT ===== */
+.grandparent {
+  height: 500px;
+  width: 500px;
+  background: #1e40af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== PARENT ===== */
+.parent {
+  height: 250px;
+  width: 250px;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CHILD ===== */
+.child {
+  height: 50px;   /* you said 5px, but clickable area too small
+                     so kept 50px for demo clarity */
+  width: 50px;
+  background: #ef4444;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="grandparent">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</div>
+
+<script>
+ 
+document.querySelector(".child").addEventListener("click", () => {
+  console.log("CHILD clicked");
+},true);
+document.querySelector(".parent").addEventListener("click", () => {
+  console.log("PARENT clicked");
+},false);
+document.querySelector(".grandparent").addEventListener("click", () => {
+  console.log("GRANDPARENT clicked");
+},false);
+
+
+
+
+</script>
+
+</body>
+</html>
