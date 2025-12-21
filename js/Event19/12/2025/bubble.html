@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Bubble Physics</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #1e3a8a);
+  overflow: hidden;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+}
+
+/* Bubble */
+.bubble {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.5),
+    rgba(96,165,250,0.6)
+  );
+
+  box-shadow:
+    inset -6px -6px 14px rgba(255,255,255,0.5),
+    inset 6px 6px 10px rgba(0,0,0,0.15),
+    0 12px 20px rgba(0,0,0,0.3);
+
+  /* 🔥 CENTER */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+
+  animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translate(-50%, -70%) scale(1);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+const randomLIST = [
+  "Silent code",
+  "Debug smarter",
+  "Think clear",
+  "Build fast",
+  "Learn daily",
+  "Ship quality",
+  "Focus matters",
+  "Simple wins",
+  "Code clean",
+  "Grow strong"
+];
+document.body.addEventListener('click',()=>{
+    const clircle=document.createElement('div')
+    clircle.className='bubble'
+        const randomItem =
+  randomLIST[Math.floor(Math.random() * randomLIST.length)];
+        clircle.textContent=randomItem
+
+
+        document.body.appendChild(clircle)
+ setTimeout(() => circle.remove(), 3000);
+})
+
+
+
+
+</script>
+
+</body>
+</html>
