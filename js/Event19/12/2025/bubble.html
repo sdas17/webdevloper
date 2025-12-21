@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Advanced Bubble Physics</title>
+<title>Bubble Click Quotes</title>
 
 <style>
 * {
@@ -33,6 +33,8 @@ body {
   color: #0f172a;
   font-size: 12px;
   font-weight: 600;
+  text-align: center;
+  padding: 6px;
 
   background: radial-gradient(
     circle at 30% 30%,
@@ -46,17 +48,13 @@ body {
     inset 6px 6px 10px rgba(0,0,0,0.15),
     0 12px 20px rgba(0,0,0,0.3);
 
-  /* 🔥 CENTER */
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%) scale(0.4);
-
   animation: floatUp 3s ease-out forwards;
 }
 
 @keyframes floatUp {
   to {
-    transform: translate(-50%, -70%) scale(1);
+    transform: translate(-50%, -120%) scale(1);
     opacity: 0;
   }
 }
@@ -78,21 +76,27 @@ const randomLIST = [
   "Code clean",
   "Grow strong"
 ];
-document.body.addEventListener('click',()=>{
-    const clircle=document.createElement('div')
-    clircle.className='bubble'
-        const randomItem =
-  randomLIST[Math.floor(Math.random() * randomLIST.length)];
-        clircle.textContent=randomItem
 
+document.body.addEventListener("click", (e) => {
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
 
-        document.body.appendChild(clircle)
- setTimeout(() => circle.remove(), 3000);
-})
+  // random text
+  const randomItem =
+    randomLIST[Math.floor(Math.random() * randomLIST.length)];
+  bubble.textContent = randomItem;
 
+  // position at click
+  bubble.style.left = `${e.clientX}px`;
+  bubble.style.top = `${e.clientY}px`;
 
+  document.body.appendChild(bubble);
 
-
+  // remove after animation
+  setTimeout(() => {
+    bubble.remove();
+  }, 3000);
+});
 </script>
 
 </body>
