@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Details Form</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f1f5f9;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 20px 25px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="userForm">
+    <h2>User Form</h2>
+
+    <!-- First Name -->
+    <label for="firstName">First Name</label>
+    <input
+    id="firstName"
+    name="firstName"
+    type="text"
+    placeholder="Enter first name"
+    required
+  >
+
+    <!-- Last Name -->
+     <label for="lastName">Last Name</label>
+
+ <input
+    id="lastName"
+    name="lastName"
+    type="text"
+    placeholder="Enter last name"
+    required
+  >
+    <!-- Phone -->
+  <label for="phone">Phone Number</label>
+ <input
+    id="phone"
+    name="phone"
+    type="tel"
+    placeholder="Enter phone number"
+    required
+  >
+    <!-- Date -->
+  <label for="date">Select Date</label>
+  <input id="date" name="date" type="date" required>
+
+    <!-- Time -->
+  <label for="time">Select Time</label>
+  <input id="time" name="time" type="time" required>
+
+    <!-- Day -->
+  <label for="day">Day</label>
+  <select id="day" name="day" required>
+      <option value="">Select Day</option>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select>
+
+    <!-- Month -->
+  <label for="month">Month</label>
+  <select id="month" name="month" required>
+      <option value="">Select Month</option>
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>December</option>
+    </select>
+
+    <!-- Year -->
+  <label for="year">Year</label>
+  <input id="year" name="year" type="number" placeholder="Enter year" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+<script>
+      const form_data = document.getElementById('userForm');
+
+    console.log(form_data,'127')
+  form_data.addEventListener('submit', function (event) {
+   event.preventDefault();
+
+    const formData = new FormData(form_data);
+  for (let [key, value] of formData.entries()) {
+    console.log(key, value,formData.keys());
+  }
+      
+  })
+</script>
+</html>

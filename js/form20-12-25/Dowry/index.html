@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dowry Awareness System (DOM)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Dowry Awareness System</h1>
+  <p>DOM Based Mini Project</p>
+</header>
+
+<section class="stats">
+  <div>Total Cases: <span id="total">0</span></div>
+  <div>Pending: <span id="pending">0</span></div>
+  <div>Resolved: <span id="resolved">0</span></div>
+</section>
+
+<section class="form-section">
+  <h2>Register Case</h2>
+
+  <form id="caseForm">
+    <input type="text" id="name" placeholder="Complainant Name" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <textarea id="details" placeholder="Case Details" required></textarea>
+    <button type="submit">Add Case</button>
+  </form>
+</section>
+
+<section class="table-section">
+  <h2>Case Records</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="caseTable"></tbody>
+  </table>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

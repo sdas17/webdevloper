@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Counter App</title>
+</head>
+<body>
+
+  <h1 id="count">0</h1>
+
+  <button id="inc">+</button>
+  <button id="dec">−</button>
+  <button id="reset">Reset</button>
+<script>
+    let count =document.getElementById('count')
+        let inc =document.getElementById('inc')
+                let dec =document.getElementById('dec')
+                                let reset =document.getElementById('reset')
+let count_no=0
+reset.addEventListener('click',(e)=>{
+    count_no=0
+    count.innerHTML=count_no
+}
+)
+dec.addEventListener('click',(e)=>{{
+    if(e.target.id =='dec'){
+        count_no--;
+        count.innerHTML=count_no
+    }
+}})
+inc.addEventListener('click',(e)=>{{
+    if(e.target.id =='inc'){
+        count_no++;
+        count.innerHTML=count_no
+    }
+}})
+
+    console.log(count)
+</script>
+</body>
+</html>
