@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #3b82f6;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 25px;
+      width: 350px;
+      border-radius: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .form-group.error input {
+      border-color: red;
+    }
+
+    .form-group.success input {
+      border-color: green;
+    }
+
+    small {
+      color: red;
+      visibility: hidden;
+    }
+
+    .form-group.error small {
+      visibility: visible;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+<body>
+    <div  class="container">
+  <form id="form">
+        <div class="form-group">
+      <label>Name</label>
+      <input type="text" id="name">
+      <small>Error message</small>
+    </div>
+     <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="email">
+      <small>Error message</small>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="password">
+      <small>Error message</small>
+    </div>
+        <button type="submit">Submit</button>
+
+    </form>
+    </div>
+  
+  <script>
+  const form = document.getElementById("form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateForm();
+  });
+
+  function validateForm() {
+    // Name validation
+    if (nameInput.value.trim() === "") {
+      setError(nameInput, "Name is required");
+    } else {
+      setSuccess(nameInput);
+    }
+
+    // Email validation
+    if (emailInput.value.trim() === "") {
+      setError(emailInput, "Email is required");
+    } else {
+      setSuccess(emailInput);
+    }
+
+    // Password validation
+    if (passwordInput.value.trim() === "") {
+      setError(passwordInput, "Password is required");
+    } else if (passwordInput.value.length < 12) {
+      setError(passwordInput, "Password must be at least 12 characters");
+    } else {
+      setSuccess(passwordInput);
+    }
+  }
+
+  function setError(input, errorMessage) {
+    const formGroup = input.parentElement;
+    const small = formGroup.querySelector("small");
+
+    small.innerText = errorMessage;
+    formGroup.className = "form-group error";
+  }
+
+  function setSuccess(input) {
+    const formGroup = input.parentElement;
+    formGroup.className = "form-group success";
+  }
+</script>
+
+</body>
+</html>
