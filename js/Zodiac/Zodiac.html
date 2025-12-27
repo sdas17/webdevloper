@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astrology App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <main class="container">
+    <form id="astroForm" class="astro-form">
+      <h1>✨ Astrology Insight ✨</h1>
+
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="title" placeholder="Your Title (Seeker, Mystic)" required />
+
+      <label>Date of Birth</label>
+      <input type="date" id="dob" required />
+
+      <select id="system">
+        <option value="western">Western Astrology</option>
+        <option value="vedic">Vedic Astrology</option>
+      </select>
+
+      <button type="submit">Reveal Destiny</button>
+    </form>
+
+    <section id="result" class="result"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
