@@ -230,33 +230,35 @@
 // }).catch((error)=>{
 //      console.log(error)
 // })
-// function placeOrder() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       console.log("🛒 Order placed");
-//       resolve("Order ID: 123");
-//     }, 1000);
-//   });
-// }
+function placeOrder() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("🛒 Order placed");
+      resolve("Order ID: 123");
+    }, 1000);
+  });
+}
 
-// function prepareFood(orderId) {
-//      console.log(orderId)
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       console.log("👨‍🍳 Food prepared for", orderId);
-//       resolve("Food Ready");
-//     }, 1000);
-//   });
-// }
+function prepareFood(orderId) {
+     console.log(orderId)
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("👨‍🍳 Food prepared for", orderId);
+      resolve("Food Ready");
+    }, 1000);
+  });
+}
 
-// function deliverFood(foodStatus) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       console.log("🚚 Food delivered:", foodStatus);
-//       resolve("Delivered Successfully");
-//     }, 1000);
-//   });
-// }
-// placeOrder().then((orderId)=>prepareFood(orderId)).then((foodStatus)=>deliverFood(foodStatus)).catch((error)=>{
-//      console.log(error)
-// })
+function deliverFood(foodStatus) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("🚚 Food delivered:", foodStatus);
+      resolve("Delivered Successfully");
+    }, 1000);
+  });
+}
+placeOrder().then((orderId)=>prepareFood(orderId)).then((foodStatus)=>deliverFood(foodStatus)).then((data)=>{
+})
+.catch((error)=>{
+     console.log(error)
+})
