@@ -190,3 +190,73 @@
 //   });
 // }
 // hasData("subham").then((checkdata)=>console.log(checkdata)).catch((error)=>console.log(error))
+
+// function fetchUser() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve({ id: 1, name: "Subham" });
+//     }, 1000);
+//   });
+// }
+
+// function fetchPosts(user) {
+//      const {id,name}=user
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//      console.log(`employee id${id} and name of employee is ${name}`)
+//       resolve([
+//         { id: 101, title: "React Basics" },
+//         { id: 102, title: "Elasticsearch UI" }
+//       ]);
+//     }, 1000);
+//   });
+// }
+
+// function fetchComments(postId) {
+//      const {id,title}=postId
+     
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(["Nice post!", "Very helpful",id,title]);
+//     }, 1000);
+//   });
+// }
+
+// fetchUser()
+// .then((user) => fetchPosts(user))
+// .then((postId)=>fetchComments(postId[0]))
+// .then((comment)=>{
+//   console.log("Comments:", comment);
+// }).catch((error)=>{
+//      console.log(error)
+// })
+// function placeOrder() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("🛒 Order placed");
+//       resolve("Order ID: 123");
+//     }, 1000);
+//   });
+// }
+
+// function prepareFood(orderId) {
+//      console.log(orderId)
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("👨‍🍳 Food prepared for", orderId);
+//       resolve("Food Ready");
+//     }, 1000);
+//   });
+// }
+
+// function deliverFood(foodStatus) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("🚚 Food delivered:", foodStatus);
+//       resolve("Delivered Successfully");
+//     }, 1000);
+//   });
+// }
+// placeOrder().then((orderId)=>prepareFood(orderId)).then((foodStatus)=>deliverFood(foodStatus)).catch((error)=>{
+//      console.log(error)
+// })
