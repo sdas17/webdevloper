@@ -180,13 +180,13 @@
 //   });
 // }
 // isEven(2).then((data)=>console.log(data)).catch((error)=>console.log(error))
-function hasData(data) {
-  return new Promise((resolve, reject) => {
-    if (data) {
-      resolve("📦 Data exists");
-    } else {
-      reject("❌ No data found");
-    }
-  });
-}
-hasData("subham").then((checkdata)=>console.log(checkdata)).catch((error)=>console.log(error))
+// function hasData(data) {
+//   return new Promise((resolve, reject) => {
+//     if (data) {
+//       resolve("📦 Data exists");
+//     } else {
+//       reject("❌ No data found");
+//     }
+//   });
+// }
+// hasData("subham").then((checkdata)=>console.log(checkdata)).catch((error)=>console.log(error))
