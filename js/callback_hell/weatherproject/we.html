@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="weather-container">
+    <h1 class="title">🌤️ Weather App</h1>
+
+    <div class="search-box">
+      <input 
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name"
+        class="search-input"
+      />
+      <button class="search-btn" id="searchBtn">Search</button>
+    </div>
+
+    <div class="weather-info">
+      <h2 class="city" id="cityName">City Name</h2>
+      <p class="temperature" id="temperature">
+        🌡️ Temperature: -- °C
+      </p>
+      <p class="climate" id="climate">
+        ☁️ Climate: --
+      </p>
+    </div>
+  </div>
+<script>
+const cityInput =document.getElementById('cityInput')
+const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener('click',((e)=>{
+    const city = cityInput.value.trim();
+    function update_data(data){
+        const cityName = document.getElementById("cityName");
+        const temperature = document.getElementById("temperature");
+        const climate = document.getElementById("climate");
+        cityName.innerHTML=data.location.name
+    temperature.innerHTML=data.current.temp_c
+      
+    }
+    fetch(`https://api.weatherapi.com/v1/current.json?key=5fceec30cfe548d786b41607252812&q=${city}&aqi=no`)
+    .then((response)=>response.json()).then((res)=>update_data(res)).catch((error)=>console.log(error))
+}))
+</script>
+</body>
+</html>
