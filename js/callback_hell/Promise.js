@@ -25,7 +25,168 @@
      // pending
 // resolve
 // reject
-fetch('http://api.weatherapi.com/v1/current.json?key=5fceec30cfe548d786b41607252812&q=India&aqi=no').then
-((response)=>response.json())
-.then((res)=>console.log(res))
-.catch((error)=>console.log(error))
+// fetch('http://api.weatherapi.com/v1/current.json?key=5fceec30cfe548d786b41607252812&q=India&aqi=no').then
+// ((response)=>response.json())
+// .then((res)=>console.log(res))
+// .catch((error)=>console.log(error))
+
+
+
+// Step 1: Place Order
+// const cart = ['checkitn', 'DOSA', 'SOMOSA'];
+
+// function placeOrder(cart, cb) {
+//   console.log("📞 Ordering food...");
+//   setTimeout(() => {
+//     const order = {
+//       orderId: 221,
+//       items: cart,
+//       restaurant: "Subham Dosa Center"
+//     };
+//     console.log(`📍 Order placed restaurant name is ${order.restaurant}`);
+//     cb(order);
+//   }, 2000);
+// }
+
+// function prepareFood(order, cb) {
+//      const {orderId}=order
+//   console.log(`🍳 Food preparation started `,orderId);
+//   setTimeout(() => {
+//     const preparedOrder = {
+//       ...order,
+//       token: 124
+//     };
+//          const {items:[piiza,dosaa,somosa]}=preparedOrder
+
+//     console.log("✅ Food prepared",piiza,dosaa,somosa);
+//     cb(preparedOrder);
+//   }, 2000);
+// }
+
+// function pickupFood(preparedOrder, cb) {
+//   console.log("🚴 Pickup started...");
+//   setTimeout(() => {
+//     const pickedUpOrder = {
+//       ...preparedOrder,
+//       pickedUp: true
+//     };
+//     console.log("✅ Food picked up");
+//     cb(pickedUpOrder);
+//   }, 2000);
+// }
+
+// function deliverFood(order) {
+//      const {}=order
+//   console.log("🏠 Delivering food...");
+//   setTimeout(() => {
+//     console.log("🎉 Delivered successfully!");
+//   }, 2000);
+// }
+
+// // callback chaining
+// placeOrder(cart, (order) => {
+//   prepareFood(order, (preparedOrder) => {
+//     pickupFood(preparedOrder, (pickedUpOrder) => {
+//       deliverFood(pickedUpOrder);
+//     });
+//   });
+// });
+// promooise used 
+// chooseOrder → chooseRestaurant → placeOrder → success
+
+// const added_cart = [];
+
+// function chooseOrder(added_cart){
+//      return new Promise(function(resolve,reject){
+//               console.log("🛒 Choosing items...");
+//           setTimeout(() => {
+//                if (added_cart.length > 0) {
+//         resolve(added_cart);
+//       } else {
+//         reject("❌ Cart is empty");
+//       }
+//           }, 3000);
+//      })
+// }
+// function chooseRestaurant(added_cart) {
+//        return new Promise((resolve, reject) => {
+//               console.log("🏪 Choosing restaurant...");
+//               setTimeout(()=>{
+//                const restaurant={
+//                     ...added_cart,
+//                     restaurant :"suham_food_service"
+//                }
+//                if (restaurant) {
+//                resolve(restaurant)
+
+//                }else{
+//         reject("❌ No restaurant available");
+
+//                }
+//               },1000)
+
+//        })
+
+// }
+// function placeOrder(orderDetails){
+// return new Promise((resolve) => {
+//     console.log("📞 Placing order...",orderDetails);
+//     setTimeout(() => {
+//       resolve({
+//         orderId: Date.now(),
+//         ...orderDetails,
+//         status: "Order Placed"
+//       });
+//     }, 1000);
+//   });
+// }
+// chooseOrder(added_cart)
+// .then(chooseRestaurant)
+// .then(placeOrder).catch((error)=>{
+//      console.log(error)
+// })
+
+
+// function checkResult(marks) {
+//   return new Promise((resolve, reject) => {
+//     if (marks >= 40) {
+//       resolve("✅ Passed");
+//     } else {
+//       reject("❌ Failed");
+//     }
+//   });
+// }
+// checkResult(9).then((res)=>console.log(res)).catch((error)=>console.log(error))
+
+
+// function loginUser(username) {
+//   return new Promise((resolve, reject) => {
+//     if (username === "admin") {
+//       resolve("✅ Login successful");
+//     } else {
+//       reject("❌ Invalid user");
+//     }
+//   });
+// }
+// loginUser('subham').then((data)=>console.log(data)).catch((error)=>console.log(error))
+
+// function isEven(num) {
+//   return new Promise((resolve, reject) => {
+//     if (num % 2 === 0) {
+//       resolve("✅ Even number");
+//     } else {
+//       reject("❌ Odd number");
+//     }
+//   });
+// }
+// isEven(2).then((data)=>console.log(data)).catch((error)=>console.log(error))
+function hasData(data) {
+  return new Promise((resolve, reject) => {
+    if (data) {
+      resolve("📦 Data exists");
+    } else {
+      reject("❌ No data found");
+    }
+  });
+}
+hasData("subham").then((checkdata)=>console.log(checkdata)).catch((error)=>console.log(error))
