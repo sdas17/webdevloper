@@ -17,13 +17,13 @@
 # bill tip 
 # pedmas
 # f sting 
-print("Welcome to the tip calculator")
-
-bill = float(input("What was the total bill? ₹ "))
-tips = int(input("What tip would you like to give? 10, 20, 30, or 40? "))
-people = int(input("How many people to split the bill? "))
-
+print('enter in your app')
+bill=float(input('What was the total bill? ₹'))
+tips =int(input('What tip would you like to give 10,20,30,40?'))
+split_people=int(input('How many people to split the bill?'))
 tip = bill * (tips / 100)
 total_bill = bill + tip
-per_person = total_bill / people
-print(f"each peson should be :₹{round(per_person,2)}")
+per_person = total_bill / split_people
+print(f"per person bill {round(per_person,2)}")
+
+
