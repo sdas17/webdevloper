@@ -1,0 +1,8 @@
+<!-- 
+strings
+integers
+floats
+booleans
+
+
+ -->
