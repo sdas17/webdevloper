@@ -71,6 +71,7 @@ function get_random(start_time, end_time) {
 
 // Random price = Math.random() × range + minimum
 // Math.floor(Math.random() * (max - min + 1)) + min
+let sample_data = [];
 for (let i = 0; i < 100; i++) {
   let array_sample = {}
   array_sample['Resturant_images'] = restaurantImages[Math.floor(Math.random() * restaurantImages.length)]
@@ -84,13 +85,36 @@ for (let i = 0; i < 100; i++) {
   array_sample['alchol_serves'] = alchol_serves[Math.floor(Math.random() * alchol_serves.length)]
   array_sample['resturant_open_time'] = get_random(12, 8)
   array_sample['resturant_close_time'] = get_random(8, 12)
+ sample_data.push(array_sample);
+}
+console.log(sample_data);
+function sample_data_dumy(data) {
+  const root = document.getElementById('root');
 
-  function sample_data_function(data) {
-  const sample_data = [...data]; // clone array
-  console.log(sample_data, 'c');
+  root.innerHTML = data
+    .map((item) => {
+      const isOpen =
+        item.resturant_open_time <= new Date().getHours() &&
+        item.resturant_close_time >= new Date().getHours();
+
+      return `
+        <div class="card">
+          <img src="${item.Resturant_images}" alt="${item.resturant_Name}">
+          
+          <div class="card-content">
+            <h3>${item.resturant_Name}</h3>
+            <p>⭐ ${item.Rating}</p>
+            <p>₹${item.price_for_two}</p>
+            <p>${item.alchol_serves ? "🍷 Serves Alcohol" : "🚫 No Alcohol"}</p>
+            <p class="${isOpen ? "open" : "closed"}">
+              ${isOpen ? "🟢 Open" : "🔴 Closed"}
+            </p>
+          </div>
+        </div>
+      `;
+    })
+    .join(""); // 🔥 VERY IMPORTANT
 }
 
-sample_data_function(array_sample);
+sample_data_dumy(sample_data);
 
-
-}
