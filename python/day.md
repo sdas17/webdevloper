@@ -6,3 +6,5 @@ booleans
 
 
  -->
+
+day 04 random module
