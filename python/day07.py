@@ -6,7 +6,7 @@ dumy = random.choice(sample)
 
 sample_data = "-" * len(dumy)
 
-print("Word:", sample_data)
+print("Word:", sample_data,live)
 
 while live > 0 and "-" in sample_data:
     sample = input("Guess a letter: ").lower()
