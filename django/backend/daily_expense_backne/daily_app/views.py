@@ -75,10 +75,10 @@ def login(request):
             {"error": "Email and password are required"},
             status=status.HTTP_400_BAD_REQUEST
         )
-
+    print(email,password)
     # 🔐 Authenticate user
-    user = authenticate(username=email, password=password)
-
+    user = authenticate(email=email, password=password)
+    print(user)
     if user is None:
         return Response(
             {"error": "Invalid email or password"},
