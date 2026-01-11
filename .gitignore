@@ -2,3 +2,4 @@ genai/
 gen_ai/
 genai_models/
 llm/
+node_modules/
