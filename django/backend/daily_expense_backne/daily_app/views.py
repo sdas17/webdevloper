@@ -7,6 +7,8 @@ from rest_framework.decorators import api_view
 from django.contrib.auth import authenticate
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth.hashers import check_password
 
 @csrf_exempt
 def signup(request):
@@ -66,7 +68,7 @@ def signup(request):
             status=500
         )
 @api_view(['POST'])
-def login(request):
+def login_view(request):
     email = request.data.get("email")
     password = request.data.get("password")
 
@@ -75,17 +77,23 @@ def login(request):
             {"error": "Email and password are required"},
             status=status.HTTP_400_BAD_REQUEST
         )
-    print(email,password)
-    # 🔐 Authenticate user
-    user = authenticate(email=email, password=password)
-    print(user)
-    if user is None:
+
+    try:
+        user = UserDetails.objects.get(email=email)
+    except UserDetails.DoesNotExist:
         return Response(
             {"error": "Invalid email or password"},
             status=status.HTTP_401_UNAUTHORIZED
         )
 
-    # 🔑 Generate JWT tokens
+    # 🔐 Check hashed password
+    if not check_password(password, user.password):
+        return Response(
+            {"error": "Invalid email or password"},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    # 🔑 Generate JWT
     refresh = RefreshToken.for_user(user)
 
     return Response({
@@ -95,6 +103,6 @@ def login(request):
         "user": {
             "id": user.id,
             "email": user.email,
-            "username": user.username
+            "full_name": user.full_name
         }
     }, status=status.HTTP_200_OK)
